@@ -1,7 +1,7 @@
 # WooCommerce-Api-Library
-(Alpha version,Not yet on Maven Central) WooCommerce Api Library written in Java,using Spring RestTemplate
+(Alpha version,Not yet on Maven Central) WooCommerce Api Library written in Java,using Spring RestTemplate.
 
-### ----------------------------------------------------How to use------------------------------------------------------
+# How to use
 
 ### Link to look at
 https://woocommerce.github.io/woocommerce-rest-api-docs/
@@ -36,7 +36,7 @@ public String get(String id) throws IOException {
  ```
  ```java
  onlineStore.updateSpecific(WooCommerceSpecific.PRODUCT_VARIATIONS,"2032", "2034", "regular_price=2000");
- //The updateSpecific requires the WooCommerceSpecific type asswell
+ //The updateSpecific requires the WooCommerceSpecific type asswell.
 ```
 ```java
  onlineStore.delete(WooCommerce.PRODUCTS,"2012");
