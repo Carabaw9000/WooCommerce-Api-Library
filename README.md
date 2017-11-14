@@ -10,7 +10,7 @@ https://woocommerce.github.io/woocommerce-rest-api-docs/
 How to start 
 ```java
 private OnlineStore onlineStore = new OnlineStoreEnable(new Authenticate(
-            "https://www.example.co.za/demo",       //the link to the website
+            "https://www.example.co.za/demo",       //The link to the website.
             "ck_234ahoekb3904lcvldska990f",         //This is your consumer_key that is an example.
             "cs_5lfpviorjnldmfj390489fjfjkb2d"));   //This is your consumer_secret that is an example.
 ```            
@@ -19,7 +19,7 @@ private OnlineStore onlineStore = new OnlineStoreEnable(new Authenticate(
 This is an example with the onlineStore.get() method.
 ```java
 public String get(String id) throws IOException {
-       return onlineStore.get(WooCommerce.PRODUCTS,"2012"); //This will get the product with id 2012
+       return onlineStore.get(WooCommerce.PRODUCTS,"2012"); //This will get the product with id 2012.And return it as String in JSON format.
     }           
  ````
     
