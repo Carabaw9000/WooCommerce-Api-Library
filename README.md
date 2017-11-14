@@ -1,7 +1,7 @@
 # WooCommerce-Api-Library
 (Alpha version,Not yet on Maven Central) WooCommerce Api Library written in Java,using Spring RestTemplate
 
-------------------------------------------------------------How to use--------------------------------------------------------------
+### ----------------------------------------------------How to use------------------------------------------------------
 
 ### Link to look at
 https://woocommerce.github.io/woocommerce-rest-api-docs/
