@@ -9,12 +9,20 @@ public class Authenticate {
     public String consumerSecret;
     public String securityKey;
     public String url;
-    public String signature = "/wp-json/wc/v2/";
+    public String version   = "2";
+    public String signature = "/wp-json/wc/v"+version+"/";
 
     public Authenticate(String url, String consumerKey, String consumerSecret){
-        this.consumerKey = "consumer_key="+consumerKey;
+        this.consumerKey    = "consumer_key="+consumerKey;
         this.consumerSecret = "&consumer_secret="+ consumerSecret;
-        this.url = url+signature;
-        securityKey = this.consumerKey+this.consumerSecret;
+        this.url            = url+signature;
+        securityKey         = this.consumerKey+this.consumerSecret;
+    }
+    public Authenticate(String url, String consumerKey, String consumerSecret,int WooCommerceVersion){
+        this.consumerKey    = "consumer_key="+consumerKey;
+        this.consumerSecret = "&consumer_secret="+consumerSecret;
+        version             = Integer.toString(WooCommerceVersion);
+        this.url            = url+signature;
+        securityKey         = this.consumerKey+this.consumerSecret;
     }
 }

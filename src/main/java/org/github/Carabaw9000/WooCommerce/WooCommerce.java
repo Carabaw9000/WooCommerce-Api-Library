@@ -3,30 +3,38 @@ package org.github.Carabaw9000.WooCommerce;
 /**
  * Created by kenneth on 2017/08/05.
  */
-public class WooCommerce {
+public enum WooCommerce {
 
-    public final static String COUPONS = "coupons/";
-    public final static String CUSTOMERS = "customers/";
-    public final static String ORDERS = "orders/";
-    public final static String PRODUCTS = "products/";
+    COUPONS("coupons/"),
+    CUSTOMERS("customers/"),
+    ORDERS("orders/"),
+    PRODUCTS("products/"),
 
     //--------------------------CAN BE USED,BUT NOT TESTED YET-----------------------------//
-    public final static String PRODUCTS_ATTRIBUTES = "products/attributes/";
-    public final static String PRODUCTS_CATEGORIES = "products/categories/";
-    public final static String PRODUCTS_SHIPPING_CLASSES = "products/shipping_classes/";
-    public final static String PRODUCTS_TAGS = "products/tags/";
-    public final static String REPORTS = "reports/";
-    public final static String SALES_REPORTS = "reports/sales";
-    public final static String TOP_SELLERS_REPORTS = "reports/top_sellers/";
-    public final static String TAX_RATES = "taxes/";
-    public final static String TAX_CLASSES = "taxes/classes/";
-    public final static String WEBHOOKS = "webhooks/";
-    public final static String SETTINGS = "settings/";
-    public final static String PAYMENT_GATEWAYS = "settings/";
-    public final static String SHIPPING_ZONES = "shipping/zones/";
-    public final static String SHIPPING_METHODS = "shipping_methods/";
-    public final static String SYSTEM_STATUS = "system_status/";
-    public final static String SYSTEM_STATUS_TOOLS = "system_status/tools/";
+    PRODUCTS_ATTRIBUTES("products/attributes/"),
+    PRODUCTS_CATEGORIES("products/categories/"),
+    PRODUCTS_SHIPPING_CLASSES("products/shipping_classes/"),
+    PRODUCTS_TAGS("products/tags/"),
+    REPORTS("reports/"),
+    SALES_REPORTS("reports/sales"),
+    TOP_SELLERS_REPORTS("reports/top_sellers/"),
+    TAX_RATES("taxes/"),
+    TAX_CLASSES("taxes/classes/"),
+    WEBHOOKS("webhooks/"),
+    SETTINGS("settings/"),
+    PAYMENT_GATEWAYS("settings/"),
+    SHIPPING_ZONES("shipping/zones/"),
+    SHIPPING_METHODS("shipping_methods/"),
+    SYSTEM_STATUS("system_status/"),
+    SYSTEM_STATUS_TOOLS("system_status/tools/");
     //------------------------------------------------------------------------------------//
+
+    private String value;
+
+    WooCommerce(String value){this.value = value;}
+
+    public String getValue(){
+        return value;
+    }
 }
 

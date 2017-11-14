@@ -7,24 +7,28 @@ import java.util.Map;
  */
 public interface OnlineStore {
 
-     void update(String WooCommerceType, String id, String query);
+     void update(WooCommerce type, String id, String query);
 
-     void update(String WooCommerceType, String id, Map<String, String> params);
+     void update(WooCommerce type, String id, Map<String, String> params);
 
-     void create(String WooCommerceType, Map<String, String> parameters);
+     void updateSpecific(WooCommerceSpecific type, String parentId, String id, String query);
 
-     void create(String WooCommerceType, String query);
+     void create(WooCommerce type, Map<String, String> parameters);
 
-     String get(String WooCommerceType, String productId);
+     void create(WooCommerce type, String query);
 
-     //String getSpecific(String WooCommerceSpecificType,String parentId,String id);
+     String get(WooCommerce type, String productId);
 
-     String getPerPage(String WooCommerceType, int page, int amount);
+     String getSpecific(WooCommerceSpecific type, String parentId, String id);
 
-     String getAll(String WooCommerceType, Map<String, String> params);
+     String getPerPage(WooCommerce type, int page, int amount);
 
-     String getAll(String WooCommerceType, String query);
+     String getAll(WooCommerce type, Map<String, String> params);
 
-     void delete(String WooCommerceType, String id);
+     String getAll(WooCommerce type, String query);
+
+     void delete(WooCommerce type, String id);
+
+     void deleteSpecific(WooCommerceSpecific type, String parentId, String id);
 
 }
